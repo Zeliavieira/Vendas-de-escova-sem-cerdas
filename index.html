@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental Tech | Perguntas Frequentes</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+    body {
+      background: #f0fdfa;
+      color: #134e4a;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header img {
+      width: 220px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .faq {
+      margin-top: 30px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #99f6e4;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 18px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #0f766e;
+      font-weight: bold;
+    }
+
+    .faq-question:hover {
+      background: #ccfbf1;
+    }
+
+    .faq-question span {
+      font-size: 1.4rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active span {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 18px 18px 18px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #134e4a;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+        <h1>Escova Dental Tech</h1>
+      <img src="imagens/escova.jfif" alt="Escova Dental Tech" />
+      <h1>Quem aqui já sentiu dor ou sangramento ao escovar os dentes?”</h1>
+      <p>A  Dental Tech é uma escova sem cerdas que limpa cabelos (ou dentes, se você preferir adaptar) usando tecnologia de vibração inteligente e campo magnético suave, eliminando sujeira e resíduos sem puxar, quebrar ou machucar.
+
+Ela não usa cerdas físicas, então não agride, não acumula bactérias e nunca perde eficiência. Dental Tech não é só uma escova. É cuidado, conforto e saúde bucal.”
+
+“Se você pudesse escolher uma escova que limpa sem dor, qual escolheria?.</p>
+    </header>
+
+    <section class="faq">
+
+      <div class="faq-item">
+        <button class="faq-question">A escova Dental Tech funciona mesmo? <span>+</span></button>
+        <div class="faq-answer">Sim. A Dental Tech utiliza vibração ultrassônica para remover a placa bacteriana sem atrito, limpando de forma eficiente e sem machucar.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Como ela limpa se não tem cerdas? <span>+</span></button>
+        <div class="faq-answer">A limpeza acontece por vibração ultrassônica, que alcança áreas difíceis e elimina bactérias sem precisar esfregar os dentes.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Ela machuca ou causa sangramento na gengiva? <span>+</span></button>
+        <div class="faq-answer">Não. Ela foi desenvolvida para proteger a gengiva, sendo ideal para pessoas com sensibilidade ou histórico de sangramento.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Quem usa aparelho pode usar a Dental Tech? <span>+</span></button>
+        <div class="faq-answer">Sim. Ela é altamente recomendada para quem usa aparelho, pois não prende fios e não causa feridas.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">A Dental Tech substitui a escova comum? <span>+</span></button>
+        <div class="faq-answer">Sim. Ela substitui completamente a escova tradicional, oferecendo mais conforto e proteção aos dentes.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Por que o valor é R$ 349,00? <span>+</span></button>
+        <div class="faq-answer">Porque se trata de uma tecnologia avançada, com maior durabilidade e que ajuda a evitar problemas bucais futuros.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Em quanto tempo vejo resultados? <span>+</span></button>
+        <div class="faq-answer">Desde os primeiros usos já é possível sentir mais conforto, menos sensibilidade e uma escovação mais agradável.</div>
+      </div>
+
+    </section>
+
+    <footer>
+      Dental Tech — cuidado, conforto e saúde bucal
+    </footer>
+
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        q.classList.toggle('active');
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
